@@ -5,8 +5,7 @@ class Solution {
         
         for(int i = 0; i < n; i++)
             arr[i] = String.valueOf(i+1);
-        
-        System.out.println(Arrays.toString(arr));
+
         
         while (n > 1) {
             for(int i = 0; i < n/2; i++) {
