@@ -10,12 +10,10 @@ class Solution:
         
         arr = []
         for i in range(1, n+1):
-            # print("i =", i)
             if i == 1:
                 arr.append("0")
             else:
                 st = arr[i-2] + "1" + reverse(invert(arr[i-2]))
                 arr.append(st)
-            # print(arr)
         return arr[-1][k-1]
         
