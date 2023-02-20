@@ -10,9 +10,7 @@ class Solution:
             if not root:
                 maxH = max(maxH, currH)
                 return maxH
-            lHeight = maxHeight(root.left, maxH, currH+1)
-            rHeight = maxHeight(root.right, maxH, currH+1)
-            return max(lHeight, rHeight)
+            return max(maxHeight(root.left, maxH, currH+1), maxHeight(root.right, maxH, currH+1))
         
         def sumLeaves(root, currH, maxH, total):
             if not root:
