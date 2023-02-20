@@ -4,9 +4,7 @@ class Solution:
         mid = (i + j) // 2     
         
         while i < j:
-            print("i =", i, "j =", j)
             mid = (i + j) // 2
-            print("mid =", mid)
             if nums[mid] == target:
                 return mid
             elif nums[mid] < target:
