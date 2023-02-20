@@ -16,5 +16,5 @@ class Solution:
                 
         if target <= nums[i] :
             return i
-        if target >= nums[j]:
+        if target > nums[j]:
             return j + 1
