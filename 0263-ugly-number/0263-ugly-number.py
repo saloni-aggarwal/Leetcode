@@ -6,8 +6,5 @@ class Solution:
         for num in nums:
             while n % num == 0:
                 n = n // num
-        if n == 1:
-            return True
-        else:
-            return False
+        return True if n == 1 else False
         
