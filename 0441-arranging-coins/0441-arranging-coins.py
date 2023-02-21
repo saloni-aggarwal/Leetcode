@@ -1,8 +1,7 @@
 class Solution:
     def arrangeCoins(self, n: int) -> int:
-        flag = True
         i = 1
-        while flag:
+        while True:
             if n - i < 0:
                 return i-1
             n -= i
