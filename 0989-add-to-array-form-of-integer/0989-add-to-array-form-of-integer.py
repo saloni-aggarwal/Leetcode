@@ -3,7 +3,6 @@ class Solution:
         kArr = [int(s) for s in str(k)]
         i, j = len(num)-1, len(kArr)-1
         carry = 0
-        # idx = len(num) - 1
         while i >= 0 and j >= 0:
             s = num[i] + kArr[j] + carry
             num[i] = s % 10
