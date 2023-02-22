@@ -10,19 +10,16 @@ class Solution:
             carry = s // 10
             i -= 1
             j -= 1
-        # print("num =", num)
         while i >= 0:
             s = num[i] + carry 
             num[i] = s % 10
             carry = s // 10
             i -= 1
-        # print("num =", num)
         while j >= 0:
             s = kArr[j] + carry 
             num.insert(0, s % 10)
             carry = s // 10
             j -= 1
-        # print("num =", num)
         if carry > 0:
             num.insert(0, carry)
         return num
