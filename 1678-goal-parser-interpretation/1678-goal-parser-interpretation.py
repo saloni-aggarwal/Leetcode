@@ -5,16 +5,14 @@ class Solution:
         while i < len(command):
             if command[i] == 'G':
                 res += 'G'
-            elif command[i] == '(':
-                temp = 0
-                while command[i] != ')':
-                    temp += 1
-                    i += 1
-                if temp ==  1:
-                    res += 'o'
-                else:
-                    res += "al"
-            i += 1
+                i += 1
+            elif command[i] == '(' and command[i+1] == ')':
+                res += 'o'
+                i += 2
+            else:
+                res += "al"
+                i += 4
+            # i += 1
         return res
             
         
