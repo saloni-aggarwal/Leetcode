@@ -7,5 +7,4 @@ class Solution:
         for path in paths:
             if path[1] not in src:
                 return path[1]
-        return ""
             
