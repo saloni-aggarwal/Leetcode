@@ -1,11 +1,11 @@
-from collections import defaultdict
+# from collections import defaultdict
 class Solution:
     def destCity(self, paths: List[List[str]]) -> str:
-        cityMap = defaultdict(list)
+        src = []
         for path in paths:
-            cityMap[path[0]].append(path[1])
+            src.append(path[0])
         for path in paths:
-            if path[1] not in cityMap:
+            if path[1] not in src:
                 return path[1]
         return ""
             
