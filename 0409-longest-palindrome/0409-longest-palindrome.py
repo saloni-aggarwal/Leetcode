@@ -11,7 +11,7 @@ class Solution:
             else:
                 oddtotal += stringMap[st] - 1
                 isOdd = True
-        if oddtotal == 0 and not isOdd:
+        if not isOdd:
             return eventotal      
         else:
             return oddtotal + eventotal + 1
