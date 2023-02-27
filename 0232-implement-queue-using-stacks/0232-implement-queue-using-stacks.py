@@ -10,8 +10,7 @@ class MyQueue:
 
     def pop(self) -> int:
         while self.stack1:
-            x = self.stack1.pop()
-            self.stack2.append(x)
+            self.stack2.append(self.stack1.pop())
         ele = self.stack2.pop()
         while self.stack2:
             self.stack1.append(self.stack2.pop())
