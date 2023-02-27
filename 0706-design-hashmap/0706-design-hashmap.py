@@ -16,8 +16,7 @@ class MyHashMap:
         if key in self.keys:
             idx = self.keys.index(key)
             return self.values[idx]
-        return -1
-        
+        return -1        
 
     def remove(self, key: int) -> None:
         if key in self.keys:
