@@ -13,6 +13,5 @@ class Solution:
                 isOdd = True
         if not isOdd:
             return eventotal      
-        else:
-            return oddtotal + eventotal + 1
+        return oddtotal + eventotal + 1
         
