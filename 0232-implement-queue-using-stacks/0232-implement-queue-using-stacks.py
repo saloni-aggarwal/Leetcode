@@ -25,9 +25,7 @@ class MyQueue:
         return ele        
 
     def empty(self) -> bool:
-        if len(self.stack1) == 0:
-            return True
-        return False
+        return True if len(self.stack1) == 0 else False
         
 
 
