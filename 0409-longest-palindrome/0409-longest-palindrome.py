@@ -13,8 +13,6 @@ class Solution:
                 isOdd = True
         if oddtotal == 0 and not isOdd:
             return eventotal      
-        # elif eventotal == 0:
-        #     return oddtotal + 1
         else:
             return oddtotal + eventotal + 1
         
