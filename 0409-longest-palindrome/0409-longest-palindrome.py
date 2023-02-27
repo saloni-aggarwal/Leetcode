@@ -2,7 +2,6 @@ from collections import defaultdict
 class Solution:
     def longestPalindrome(self, s: str) -> int:
         stringMap = Counter(s)
-        maxOdd = 0
         eventotal = 0
         oddtotal = 0
         isOdd = False
