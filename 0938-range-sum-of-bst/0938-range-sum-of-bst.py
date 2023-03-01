@@ -20,7 +20,7 @@ class Solution:
                     calSum(root.left, low, high)
                 if root.val < high:
                     calSum(root.right, low, high)
-            return total
+            # return total
         
         calSum(root, low, high)
         
