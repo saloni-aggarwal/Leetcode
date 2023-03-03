@@ -12,19 +12,20 @@ class Solution:
         
         if currSum == targetSum and not root.left and not root.right:
             return True
-        ans = False
         
         if root.left:
-            ans = self.hasPath(root.left, targetSum, currSum + root.left.val) 
+            if self.hasPath(root.left, targetSum, currSum + root.left.val):
+                return True
             
-        if ans:
-            return True
+        # if ans:
+        #     return True
         
         if root.right:
-            ans = self.hasPath(root.right, targetSum, currSum + root.right.val)
+            if self.hasPath(root.right, targetSum, currSum + root.right.val):
+                return True
         
-        if ans:
-            return True
+        # if ans:
+        #     return True
         
         
     def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
