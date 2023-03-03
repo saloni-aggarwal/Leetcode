@@ -10,22 +10,16 @@ class Solution:
         if not root:            
             return False
         
-        if currSum == targetSum and not root.left and not root.right:
+        elif currSum == targetSum and not root.left and not root.right:
             return True
         
         if root.left:
             if self.hasPath(root.left, targetSum, currSum + root.left.val):
                 return True
-            
-        # if ans:
-        #     return True
         
         if root.right:
             if self.hasPath(root.right, targetSum, currSum + root.right.val):
                 return True
-        
-        # if ans:
-        #     return True
         
         
     def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
