@@ -10,13 +10,10 @@ class Solution:
         if not root:            
             return False
         
-        # elif currSum == targetSum and not root.left and not root.right:
-        #     return True
         elif targetSum == 0 and not root.left and not root.right:
             return True
         
         if root.left:
-            # if self.hasPath(root.left, targetSum, currSum + root.left.val):
             if self.hasPath(root.left, targetSum - root.left.val):
                 return True
         
