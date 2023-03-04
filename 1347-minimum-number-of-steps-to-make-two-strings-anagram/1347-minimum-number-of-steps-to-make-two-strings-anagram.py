@@ -7,6 +7,5 @@ class Solution:
             if ch not in countS:
                 total += countT[ch]
             else:
-                # :
-                total += (countT[ch] - countS[ch]) if countT[ch] - countS[ch] > 0 else 0
+                total += (countT[ch]-countS[ch]) if countT[ch]-countS[ch] > 0 else 0
         return total
