@@ -11,4 +11,4 @@ class Solution:
                 j += 1
             elif g[i] > s[i]:
                 j += 1
-        return count
+        return i
