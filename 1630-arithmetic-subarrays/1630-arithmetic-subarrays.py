@@ -6,10 +6,8 @@ class Solution:
             subArr = nums[l[i]:r[i]+1]
             subArr.sort()
             flag = True
-            # print("subArr =", subArr)
             for j in range(1, len(subArr)-1):
                 if subArr[j-1] - subArr[j] != subArr[j] - subArr[j+1]:
                     flag = False
             ans.append(flag)
-            # print("ans =", ans)
         return ans
