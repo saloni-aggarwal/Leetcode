@@ -5,14 +5,15 @@ class Solution:
         while i < len(name) and j < len(typed):            
             ch = name[i]
             cnt = 0
-            i += 1
+            
+            # i += 1
             while i < len(name) and name[i] == ch:
                 i += 1
                 cnt += 1
                 
             if ch != typed[j]:
                 return False
-            j += 1
+            # j += 1
             while j < len(typed) and typed[j] == ch:
                 j += 1
                 cnt -= 1
