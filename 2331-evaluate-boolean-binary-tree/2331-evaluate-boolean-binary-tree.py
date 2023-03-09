@@ -11,9 +11,8 @@ class Solution:
         elif root.val == 1:
             return True
         else:
-            if root.left and root.right:
+            if root.left:
                 left = self.evaluateTree(root.left)
-            # if root.right:
                 right = self.evaluateTree(root.right)
             if root.val == 2:
                 return left or right
