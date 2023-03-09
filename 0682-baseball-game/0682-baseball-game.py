@@ -12,4 +12,5 @@ class Solution:
                     score.append(score[-1] + score[-2])
             else:
                 score.append(int(operation))
+                
         return sum(score)
