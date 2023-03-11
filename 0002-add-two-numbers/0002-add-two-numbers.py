@@ -16,10 +16,6 @@ class Solution:
                 carry += l2.val
                 l2 = l2.next
             carry, ans = divmod(carry, 10)
-            # print("carry =", carry, "ans =", ans)
             temp.next = temp = ListNode(ans)
-        # print("temp =", temp)
-        # print("res =", res)
-        # print("carry =", carry)
         return res.next
         
