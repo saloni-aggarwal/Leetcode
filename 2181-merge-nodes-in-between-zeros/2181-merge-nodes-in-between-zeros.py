@@ -15,7 +15,5 @@ class Solution:
                 temp = temp.next
                 s = 0
             head = head.next
-        # print("temp =", temp)
-        # print("res =", res)
         return res.next
         
