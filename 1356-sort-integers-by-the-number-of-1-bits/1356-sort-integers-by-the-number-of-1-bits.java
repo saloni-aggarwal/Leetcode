@@ -10,7 +10,7 @@ class Solution {
 //             cntList.put(cnt, temp);
 //         }
         
-        int[] ans = new int[arr.length];
+        // int[] ans = new int[arr.length];
 //         int idx = 0;
 //         for(Map.Entry<Integer, List<Integer>> pair : cntList.entrySet()) {
 //             temp = pair.getValue();
@@ -21,14 +21,14 @@ class Solution {
 //             }
                 
 //         }
+        // return ans;
+        
         var nums = Arrays.stream(arr)
 					 .boxed()
 					 .toArray(Integer[]::new);
-        // System.out.println(Arrays.toString(nums));
         
         Arrays.sort(nums, Comparator.comparingInt(Integer::bitCount)
 							    .thenComparingInt(n -> n));
-        // System.out.println(Arrays.toString(nums));
         
         return Arrays.stream(nums)
 				 .mapToInt(Integer::intValue)
