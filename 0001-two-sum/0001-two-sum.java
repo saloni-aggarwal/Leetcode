@@ -9,7 +9,7 @@ class Solution {
             idx.put(nums[i], temp);
             count.put(nums[i], count.getOrDefault(nums[i], 0)+1);
         }
-        // System.out.println(idx);
+        
         for(int num: nums) {
             int remaining = target - num;
             if(remaining == num && count.get(num) > 1) {
@@ -18,6 +18,7 @@ class Solution {
                 return new int[]{idx.get(num).get(0), idx.get(remaining).get(0)};
             }
         }
+        
         return new int[2];
     }
 }
