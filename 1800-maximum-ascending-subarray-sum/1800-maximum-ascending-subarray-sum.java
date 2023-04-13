@@ -8,7 +8,6 @@ class Solution {
                 sum = 0;
             }
             sum += nums[i];
-            // System.out.println("nums[i] =" +nums[i] +" sum =" +sum);
         }
         return Math.max(ans, sum);
     }
