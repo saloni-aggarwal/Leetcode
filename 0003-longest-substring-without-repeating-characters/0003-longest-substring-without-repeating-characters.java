@@ -9,7 +9,6 @@ class Solution {
                 seq = seq.subList(idx+1, seq.size());
             }
             seq.add(s.charAt(i));
-            // System.out.println(seq);
         }
         return Math.max(len, seq.size());
     }
