@@ -10,15 +10,17 @@ class Solution {
         int len = s1.length();
         
         for(int i = 0; i <= s2.length()-len; i++) {
-            temp = s2.substring(i, i+s1.length()).toCharArray();
-            Arrays.sort(temp);
-            String compare = new String(temp);
-            
-            if(compare.equals(s1)) {
-                return true;
+            if(s1.indexOf(s2.charAt(i)) != -1) {
+                temp = s2.substring(i, i+s1.length()).toCharArray();
+                Arrays.sort(temp);
+                String compare = new String(temp);
+
+                if(compare.equals(s1)) {
+                    return true;
+                }
             }
         }
         
-        return false;
+        return false; 
     }
 }
