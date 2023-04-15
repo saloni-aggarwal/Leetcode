@@ -50,13 +50,7 @@ class Solution {
             
             queue.add(curr.left);
             queue.add(curr.right);
-            // System.out.println("curr =" +curr.val);
-            // System.out.println("temp =" +temp);
-            // System.out.println("track =" +track);
         }
-        // if(!temp.isEmpty()) {
-        //     ans.add(temp);
-        // }
         
         return ans;
     }
