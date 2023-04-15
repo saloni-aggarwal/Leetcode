@@ -28,10 +28,10 @@ class Solution {
     }
     
     public boolean isSubtree(TreeNode root, TreeNode subRoot) {
-        if (root == null && subRoot == null) {
-            return true;
-        }
-        else if(root == null) {
+        // if (root == null && subRoot == null) {
+        //     return true;
+        // }
+        if(root == null) {
             return false;
         }
         if(root.val == subRoot.val && check(root, subRoot))
