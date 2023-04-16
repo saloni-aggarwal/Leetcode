@@ -2,12 +2,11 @@ class Solution {
     public int findMin(int[] nums) {
         int i = 0, j = nums.length-1;
         int mid;
-        while(i < j) {
-            
-            mid = (i + j) / 2;
+        while(i < j) {         
             if(nums[i] < nums[j])
                 return nums[i];
             else {
+                mid = (i + j) / 2;
                 if (nums[mid]<nums[j]){
                     i++;
                     j = mid;
