@@ -3,9 +3,10 @@ class Solution {
         int i = 0, j = nums.length-1;
         int mid;
         while(i < j) {
+            
             mid = (i + j) / 2;
             if(nums[i] < nums[j])
-                j = mid;
+                return nums[i];
             else {
                 if (nums[mid]<nums[j]){
                     i++;
@@ -14,8 +15,6 @@ class Solution {
                 else {
                     i = mid+1;
                 }
-                
-                // ans = Math.min(ans, nums[i]);
             }
         }
         return nums[i];
