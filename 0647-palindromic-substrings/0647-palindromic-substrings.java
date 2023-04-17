@@ -20,20 +20,19 @@ class Solution {
 //         return ans;
         
 //     }
-    int ans = 0;
+    
+//     Method 2
+    public int ans = 0;
     public void countSubStr(String s, int i, int j) {
-        // int ans = 0;
         
         while(i >= 0 && j < s.length()) {
             if(s.charAt(i--) != s.charAt(j++))
                 break;
             ans += 1;
         }
-        // return ans;
     }
     
      public int countSubstrings(String s) {
-         // int ans = 0;
          
          for(int i = 0; i < s.length(); i++) {
              countSubStr(s, i, i);
