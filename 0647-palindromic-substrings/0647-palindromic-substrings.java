@@ -20,23 +20,24 @@ class Solution {
 //         return ans;
         
 //     }
-    public int countSubStr(String s, int i, int j) {
-        int ans = 0;
+    int ans = 0;
+    public void countSubStr(String s, int i, int j) {
+        // int ans = 0;
         
         while(i >= 0 && j < s.length()) {
             if(s.charAt(i--) != s.charAt(j++))
                 break;
             ans += 1;
         }
-        return ans;
+        // return ans;
     }
     
      public int countSubstrings(String s) {
-         int ans = 0;
+         // int ans = 0;
          
          for(int i = 0; i < s.length(); i++) {
-             ans += countSubStr(s, i, i);
-             ans += countSubStr(s, i, i+1);
+             countSubStr(s, i, i);
+             countSubStr(s, i, i+1);
          }
          return ans;
      }
