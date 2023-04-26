@@ -13,13 +13,11 @@ class Solution {
         track.add(intervals[0][1]);
         
         for(int i = 1; i < intervals.length; i++) {
-            // System.out.println(track);
             if(track.peek() <= intervals[i][0])
                 track.poll();
-            track.add(intervals[i][1]);
-            
+            track.add(intervals[i][1]);            
         }
-        // System.out.println(track);
+        
         return track.size();
     }
 }
