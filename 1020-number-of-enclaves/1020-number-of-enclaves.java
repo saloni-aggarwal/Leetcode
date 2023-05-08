@@ -17,28 +17,31 @@ class Solution {
         int n = grid[0].length;
         
         for(int i = 0; i < m; i++) {
-            if(grid[i][0] == 1) {
-                dfs(grid, i, 0, m, n);
+            for(int j = 0; j < n; j++) {
+                if(i == 0 || i == m-1 || j == 0 || j == n-1) {
+                    if(grid[i][j] == 1)
+                        dfs(grid, i, j, m, n);
+                }
             }
         }
         
-        for(int i = 0; i < m; i++) {
-            if(grid[i][n-1] == 1) {
-                dfs(grid, i, n-1, m, n);
-            }
-        }
+//         for(int i = 0; i < m; i++) {
+//             if(grid[i][n-1] == 1) {
+//                 dfs(grid, i, n-1, m, n);
+//             }
+//         }
         
-        for(int i = 0; i < n; i++) {
-            if(grid[0][i] == 1) {
-                dfs(grid, 0, i, m, n);
-            }
-        }
+//         for(int i = 0; i < n; i++) {
+//             if(grid[0][i] == 1) {
+//                 dfs(grid, 0, i, m, n);
+//             }
+//         }
         
-        for(int i = 0; i < n; i++) {
-            if(grid[m-1][i] == 1) {
-                dfs(grid, m-1, i, m, n);
-            }
-        }
+//         for(int i = 0; i < n; i++) {
+//             if(grid[m-1][i] == 1) {
+//                 dfs(grid, m-1, i, m, n);
+//             }
+//         }
                 
         int count = 0;
         
