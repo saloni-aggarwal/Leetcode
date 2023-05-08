@@ -39,11 +39,7 @@ class Solution {
                 dfs(grid, m-1, i, m, n);
             }
         }
-        
-        // for(int i = 0; i < m; i++) {
-        //     System.out.println(Arrays.toString(grid[i]));
-        // }
-        
+                
         int count = 0;
         
         for(int i = 0; i < m; i++) {
