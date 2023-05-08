@@ -24,24 +24,6 @@ class Solution {
                 }
             }
         }
-        
-//         for(int i = 0; i < m; i++) {
-//             if(grid[i][n-1] == 1) {
-//                 dfs(grid, i, n-1, m, n);
-//             }
-//         }
-        
-//         for(int i = 0; i < n; i++) {
-//             if(grid[0][i] == 1) {
-//                 dfs(grid, 0, i, m, n);
-//             }
-//         }
-        
-//         for(int i = 0; i < n; i++) {
-//             if(grid[m-1][i] == 1) {
-//                 dfs(grid, m-1, i, m, n);
-//             }
-//         }
                 
         int count = 0;
         
