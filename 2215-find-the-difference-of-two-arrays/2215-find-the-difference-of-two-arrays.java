@@ -12,10 +12,12 @@ class Solution {
         
         List<List<Integer>> res = new ArrayList<>();
         List<Integer> temp = new ArrayList<>();
+        
         for(int num: set1) {
             if(!set2.contains(num))
                 temp.add(num);
         }
+        
         res.add(temp);
         temp = new ArrayList<>();
         
@@ -24,6 +26,7 @@ class Solution {
                 temp.add(num);
         }
         res.add(temp);
+        
         return res;
     }
 }
