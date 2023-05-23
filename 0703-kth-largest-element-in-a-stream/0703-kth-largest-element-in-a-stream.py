@@ -24,8 +24,6 @@ class KthLargest(object):
                 if self.nums[i] <= val:
                     self.nums.insert(i, val)
                     break
-        # print(val)
-        # print(self.nums)
         return self.nums[self.k-1]
         
 
