@@ -7,7 +7,6 @@ class KthLargest(object):
         """
         self.k = k
         self.nums = nums
-        self.nums.sort(reverse=True)
         
 
     def add(self, val):
@@ -15,15 +14,8 @@ class KthLargest(object):
         :type val: int
         :rtype: int
         """
-        if len(self.nums) == 0 or self.nums[0] < val:
-            self.nums.insert(0, val)
-        elif self.nums[-1] > val:
-            self.nums.insert(len(self.nums), val)
-        else:
-            for i in range(len(self.nums)):
-                if self.nums[i] <= val:
-                    self.nums.insert(i, val)
-                    break
+        self.nums.append(val)
+        self.nums.sort(reverse=True)
         return self.nums[self.k-1]
         
 
