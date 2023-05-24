@@ -13,7 +13,6 @@ class FindElements(object):
         root.val = val
         self.makeTree(root.left, 2 * val + 1)
         self.makeTree(root.right, 2 * val + 2)
-        # return root
 
     def __init__(self, root):
         """
@@ -21,7 +20,6 @@ class FindElements(object):
         """
         self.seen = set()
         self.makeTree(root, 0)
-        print(self.seen)
         
     def helper(self, root, target):
         if not root:
