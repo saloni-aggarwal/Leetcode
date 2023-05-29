@@ -5,7 +5,7 @@ class Solution:
         """
         temp = nums1[:m]
         
-        i, j, k = 0, 0, 0
+        i, j = 0, 0
         
         while i < m and j < n:
             if temp[i] < nums2[j]:
@@ -15,19 +15,15 @@ class Solution:
             else:
                 nums1[i+j] = nums2[j]
                 j += 1
-                
-            k +=1
             
         if i < m:
             while i < m:
                 nums1[i+j] = temp[i]
-                k += 1
                 i += 1
                 
         if j < n:
             while j < n:
                 nums1[i+j] = nums2[j]
-                k += 1
                 j += 1
                 
         
