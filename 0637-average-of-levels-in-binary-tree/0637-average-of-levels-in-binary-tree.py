@@ -12,18 +12,20 @@ class Solution:
         ans = []
         
         while bfs:
-            tempBfs = []
+            count = length = len(bfs)
             total = 0
-            for n in bfs:
+            while count > 0:
+                n = bfs.pop(0)
                 total += n.val
                 if n.left:
-                    tempBfs.append(n.left)
+                    bfs.append(n.left)
                 if n.right:
-                    tempBfs.append(n.right)
+                    bfs.append(n.right)
+                count -= 1
             
-            ans.append(total/len(bfs))
+            ans.append(total/length)
             
-            bfs = tempBfs
+            # bfs = tempBfs
             
         return ans
                 
