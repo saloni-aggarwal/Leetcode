@@ -9,24 +9,24 @@ class Solution:
         
         while i < m and j < n:
             if temp[i] < nums2[j]:
-                nums1[k] = temp[i]
+                nums1[i+j] = temp[i]
                 i += 1
                 
             else:
-                nums1[k] = nums2[j]
+                nums1[i+j] = nums2[j]
                 j += 1
                 
             k +=1
             
         if i < m:
             while i < m:
-                nums1[k] = temp[i]
+                nums1[i+j] = temp[i]
                 k += 1
                 i += 1
                 
         if j < n:
             while j < n:
-                nums1[k] = nums2[j]
+                nums1[i+j] = nums2[j]
                 k += 1
                 j += 1
                 
