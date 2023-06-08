@@ -4,9 +4,7 @@ class Solution {
     
     public void recurs(String s, int idx, int n) {
         if(idx == n) {
-            // if(!ans.contains(s)) {
-                ans.add(s);
-            // }
+            ans.add(s);
             return;
         }
         
