@@ -16,7 +16,7 @@ class Solution:
                 while mid < n and letters[mid] == target:
                     mid += 1
                     
-                return letters[(mid)%n]
+                return letters[mid%n]
             
         return letters[i%n]
         
