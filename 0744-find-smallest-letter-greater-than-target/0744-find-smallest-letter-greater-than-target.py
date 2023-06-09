@@ -6,10 +6,10 @@ class Solution:
         while i <= j:
             mid = (i+j)//2
             
-            if ord(letters[mid]) < ord(target):
+            if letters[mid] < target:
                 i = mid + 1
                 
-            elif ord(letters[mid]) > ord(target):
+            elif letters[mid] > target:
                 j = mid - 1
                 
             else:
