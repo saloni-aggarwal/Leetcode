@@ -12,18 +12,16 @@ class Solution:
         ans = []
         
         def helper(root):
+            
             if not root:
                 return None
+            
             left = helper(root.left)
             right = helper(root.right)
 
-            # print("left =", left)
-            # print("right =", right)
-            if left and not right:
-                # print("in if")               
+            if left and not right:             
                 ans.append(left.val)
             elif right and not left:
-                # print("in elif")
                 ans.append(right.val)
             
             return root
