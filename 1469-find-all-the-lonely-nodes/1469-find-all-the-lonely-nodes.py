@@ -11,24 +11,21 @@ class Solution:
         
         ans = []
         
-        def helper(root, lonely):
+        def helper(root):
             
             if not root:
-                return
+                return None
             
-            if lonely:
-                ans.append(root.val)
-            
-            helper(root.left, root.right == None)
-            helper(root.right, root.left == None)
+            left = helper(root.left)
+            right = helper(root.right)
 
-            # if left and not right:             
-            #     ans.append(left.val)
-            # elif right and not left:
-            #     ans.append(right.val)
+            if left and not right:             
+                ans.append(left.val)
+            elif right and not left:
+                ans.append(right.val)
             
-            # return root
+            return root
         
-        helper(root, False)
+        helper(root)
         return ans
         
