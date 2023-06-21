@@ -33,5 +33,4 @@ class Solution:
             nodes[parent] = node
             nodes[child] = childNode
             
-            # print("NODES = ", nodes)
         return nodes[list(parents - children)[0]]
