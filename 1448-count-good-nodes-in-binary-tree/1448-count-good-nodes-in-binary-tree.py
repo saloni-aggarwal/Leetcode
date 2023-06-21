@@ -9,10 +9,12 @@ class Solution:
         self.ans = 0
         
     def goodNodes(self, root: TreeNode, maxVal = float('-inf')) -> int:
-        if root:
-            if root.val >= maxVal:
-                maxVal = root.val
-                self.ans += 1
+        # if root:
+        if root.val >= maxVal:
+            maxVal = root.val
+            self.ans += 1
+        if root.left:
             self.goodNodes(root.left, maxVal)
+        if root.right:
             self.goodNodes(root.right, maxVal)
         return self.ans
