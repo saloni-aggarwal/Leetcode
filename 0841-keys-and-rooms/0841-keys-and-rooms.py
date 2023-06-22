@@ -1,7 +1,6 @@
 class Solution:
     def visitAll(self, rooms, key, visited):
         visited.add(key)
-        
         for k in rooms[key]:
             if k not in visited:
                 self.visitAll(rooms, k, visited)
@@ -16,5 +15,6 @@ class Solution:
         for i in range(len(rooms)):
             if i not in visited:
                 return False
+            
         return True
                 
