@@ -17,6 +17,5 @@ class Solution:
             return n-1
         for i in range(n):
             if nums[i] == 0:
-                temp = nums[:i] + nums[i+1:]
-                longest = max(longest, self.countOnes(temp, n-1, longest))
+                longest = max(longest, self.countOnes(nums[:i] + nums[i+1:], n-1, longest))
         return longest
