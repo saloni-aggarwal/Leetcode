@@ -8,4 +8,6 @@ class Solution:
         for i in range(len(matrix)):
             total += sum(matrix[i])
         
-        return total
+        # print()
+        
+        return sum(map(sum, matrix))
