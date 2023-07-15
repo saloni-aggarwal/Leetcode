@@ -3,6 +3,7 @@ class Solution:
         s = s.split()
         if len(pattern) != len(s):
             return False
+        
         wordToLetter = collections.defaultdict(str)
         letterToWord = collections.defaultdict(str)
         
