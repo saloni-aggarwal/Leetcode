@@ -11,5 +11,6 @@ class Solution:
         for num in nums1:
             res.append(index[num][counter[num]-1])
             counter[num] -= 1
+            
         return res
             
