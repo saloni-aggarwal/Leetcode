@@ -2,7 +2,6 @@ class Solution:
     def anagramMappings(self, nums1: List[int], nums2: List[int]) -> List[int]:
         counter = collections.Counter(nums2)
         index = collections.defaultdict(list)
-        # print(counter)
         
         for i, num in enumerate(nums2):
             index[num].append(i)
