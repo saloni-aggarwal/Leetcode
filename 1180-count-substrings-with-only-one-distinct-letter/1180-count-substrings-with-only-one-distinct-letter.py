@@ -7,7 +7,7 @@ class Solution:
             while right < len(s) and s[right] == s[left]:
                 right += 1
             subStr = right - left
-            # if subStr > 0:
             total += (1 + subStr) * subStr // 2
             left = right
+            
         return total
