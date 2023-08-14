@@ -11,11 +11,10 @@ class Solution:
         if len(tree) == 1:
             return tree[0]
         
-        parents, children = set(), set()
+        children = set()
         
         for node in tree:
             if node.children:
-                # parents.add(node)
                 children.update(node.children)
         
         for p in tree:
