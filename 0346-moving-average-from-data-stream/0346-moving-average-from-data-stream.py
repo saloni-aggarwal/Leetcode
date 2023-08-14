@@ -5,7 +5,6 @@ class MovingAverage:
         self.currSize = 0
 
     def next(self, val: int) -> float:
-        # print(self.currSize)
         if self.currSize == len(self.vals):
             self.vals.pop(0)
             self.vals.append(val)
