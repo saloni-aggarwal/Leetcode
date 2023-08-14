@@ -15,10 +15,10 @@ class Solution:
         
         for node in tree:
             if node.children:
-                parents.add(node)
+                # parents.add(node)
                 children.update(node.children)
         
-        for p in parents:
+        for p in tree:
             if p not in children:
                 return p
             
