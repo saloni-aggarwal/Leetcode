@@ -27,8 +27,6 @@ class Solution:
             temp = [0 for _ in range(k)]
             memo.append(temp)
         
-        # memo = [[None] * k] * n 
-        
         return self.dfs(flights, days, 0, 0, n, k, memo)
 
 
