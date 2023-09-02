@@ -1,3 +1,33 @@
+# Solution 1
+
+# class Solution:
+    
+#     def dfs(self, flights, days, curr_city, weekNo, n, k, memo):
+#         if weekNo == k:
+#             return 0
+        
+#         if memo[curr_city][weekNo]:
+#             return memo[curr_city][weekNo]
+        
+#         maxVacDay = 0
+#         for i in range(n):
+#             if i == curr_city or flights[curr_city][i] == 1:
+#                 vacationDays = days[i][weekNo] + self.dfs(flights, days, i, weekNo+1, n, k, memo)
+#                 maxVacDay = max(maxVacDay, vacationDays)
+                
+#         memo[curr_city][weekNo] = maxVacDay        
+#         return maxVacDay  
+        
+#     def maxVacationDays(self, flights: List[List[int]], days: List[List[int]]) -> int:
+#         n = len(flights)
+#         k = len(days[0])
+        
+#         memo = [[None] * k] * n 
+        
+#         return self.dfs(flights, days, 0, 0, n, k, memo)
+
+
+# Solution 2
 class Solution:
     def maxVacationDays(self, flights: List[List[int]], days: List[List[int]]) -> int:
         cities = len(days)
