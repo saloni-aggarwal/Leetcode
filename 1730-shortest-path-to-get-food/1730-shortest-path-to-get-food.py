@@ -4,15 +4,15 @@ class Solution:
         visited = set()
         m, n = len(grid), len(grid[0])
         
-        # breaker = False
+        breaker = False
         for i in range(m):
             for j in range(n):
                 if grid[i][j] == "*":
                     queue.append((i,j))
-                    # breaker = True
+                    breaker = True
                     break
-            # if breaker:
-            #     break
+            if breaker:
+                break
           
         neighbors = [(0,1), (1,0), (0,-1), (-1,0)]
         steps = 0
